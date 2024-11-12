@@ -1,9 +1,25 @@
 <html>
 <head>
-  
+    <style>
+        #hiddenDiv {
+            display: none; /* Initially hidden */
+            /* margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f8ff;
+            border: 1px solid #ddd; */
+        }
+    </style>
 </head>
   <body>
-   <h2> <a href="#link1">Directorate SDRF</a></h2>
+
+    <input type="text" id="inputField" placeholder="Enter code here">
+    <button onclick="checkInput()">Submit</button>
+    <div id="hiddenDiv">
+    
+
+
+
+    <h2> <a href="#link1">Directorate SDRF</a></h2>
     <h2><a href="#link2">District SDRF Balance</a></h2>
     <p>
       <h2 id="link1">
@@ -17,5 +33,21 @@
       </h2>
     <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRLmBBzzsWwNzfPkEqsKf71ba4tJ16iIXvmBQWzw3doKI63o6XdcL1QaczNe1sFJGxDUHWcZV_0RYR_/pubhtml?widget=true&amp;headers=false" width=90% height=80%></iframe>
   </p>
+
+</div>
+  <script>
+        function checkInput() {
+            const input = document.getElementById("inputField").value;
+            const hiddenDiv = document.getElementById("hiddenDiv");
+
+            if (input === "1212") {
+                hiddenDiv.style.display = "block";
+            } else {
+                hiddenDiv.style.display = "none"; // Hide the div if the input is incorrect
+            }
+        }
+    </script>
   </body>
+
+  
 </html>
